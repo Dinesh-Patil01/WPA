@@ -6,7 +6,7 @@
 Develop a React.js application that fetches and displays a list of users from an API, allows searching and filtering, and provides a detailed view for each user.
 
 ## Preview of the Application
-![UI Screenshots](./User Management.pdf)
+![UI Screenshots](./src/assets/User Management.png)
 
 ---
 
