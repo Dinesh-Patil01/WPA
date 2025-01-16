@@ -1,5 +1,5 @@
 import React from "react";
-import { SunIcon, MoonIcon } from "@heroicons/react/24/solid"; // Corrected import path
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid"; 
 
 const Header = ({ toggleTheme, isDarkMode }) => (
   <header

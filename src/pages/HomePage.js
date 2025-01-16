@@ -9,7 +9,7 @@ const HomePage = ({ isDarkMode }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
   const [currentPage, setCurrentPage] = useState(1);
-  const [usersPerPage] = useState(9);  // Display 6 users per page
+  const [usersPerPage] = useState(9); 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -51,7 +51,7 @@ const HomePage = ({ isDarkMode }) => {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  // if (loading) return <Spinner />;
+  
  
   if (loading) return <Spinner isDarkMode={isDarkMode} />;
 
@@ -64,7 +64,7 @@ const HomePage = ({ isDarkMode }) => {
       }`}
     >
       <div className="mb-4 flex justify-between items-center">
-        {/* Search Bar */}
+       
         <input
           type="text"
           placeholder="Search by name..."
@@ -77,7 +77,7 @@ const HomePage = ({ isDarkMode }) => {
           }`}
         />
 
-        {/* Sort Button */}
+       
         <button
           onClick={() => setSortOrder(sortOrder === "asc" ? "desc" : "asc")}
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
@@ -86,16 +86,16 @@ const HomePage = ({ isDarkMode }) => {
         </button>
       </div>
 
-      {/* User Cards */}
+    
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6 mx-auto max-w-7xl">
         {currentUsers.map((user) => (
           <UserCard key={user.id} user={user} isDarkMode={isDarkMode} />
         ))}
       </div>
 
-      {/* Fixed Pagination */}
+  
       <div className="fixed bottom-4 right-4 flex items-center space-x-2">
-        {/* Previous Button */}
+    
         <button
           onClick={goToPreviousPage}
           disabled={currentPage === 1}
@@ -108,12 +108,12 @@ const HomePage = ({ isDarkMode }) => {
           ←
         </button>
 
-        {/* Page Number */}
+       
         <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gray-300 text-black font-semibold">
           {currentPage}
         </div>
 
-        {/* Next Button */}
+     
         <button
           onClick={goToNextPage}
           disabled={currentPage === totalPages}

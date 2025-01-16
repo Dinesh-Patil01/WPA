@@ -33,7 +33,7 @@ const UserDetailPage = ({ isDarkMode }) => {
     <div
       className={`min-h-screen p-6 ${isDarkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-black"}`}
     >
-      {/* Back Button */}
+     
       <button
         onClick={() => navigate(-1)}
         className="bg-blue-500 text-white px-6 py-2 rounded-lg mb-6 hover:bg-blue-600 focus:outline-none"
@@ -41,7 +41,7 @@ const UserDetailPage = ({ isDarkMode }) => {
         ← Go Back
       </button>
 
-      {/* User Details Card */}
+     
       <div
         className={`max-w-lg mx-auto p-10 rounded-lg shadow-lg border ${
           isDarkMode
